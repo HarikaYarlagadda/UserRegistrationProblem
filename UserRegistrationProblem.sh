@@ -13,10 +13,10 @@ else
 	echo false
 fi
 read -p "enter password " Password
-patpassword="^[a-z]{8,100}[A-Z0-9]{1,}$"
+patpassword="^([a-zA-Z0-9!@#$%&]{1,}){8,}$"
 if [[ $Password =~ $patpassword ]]
 then
 	echo correct
 else
-	echo "password must contain minimum 8 characters and one uppercase letter and one number "
+echo "password must contain minimum 8 characters and one uppercase letter and one number and one special character "
 fi
